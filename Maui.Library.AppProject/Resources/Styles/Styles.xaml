@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Thickness x:Key="ContentMargin">0,20,0,20</Thickness>
+    <Thickness x:Key="DefaultContentMargin">20</Thickness>
+    <Thickness x:Key="CellContentMarginLeft">16,0,0,0</Thickness>
+    <Thickness x:Key="CellMargin">20,0,20,20</Thickness>
+    <Thickness x:Key="StackedCellMargin">20,0,20,0</Thickness>
+    <Thickness x:Key="TitleMargin">0,0,0,20</Thickness>
+    <Thickness x:Key="PageMargin">1</Thickness>
+    <Thickness x:Key="StandardContentMargin">8</Thickness>
+    <x:Double x:Key="RowSpacing">8</x:Double>
+    <Thickness x:Key="RowMargin">8</Thickness>
+    <Thickness x:Key="TextMargin">6</Thickness>
+    <x:Double x:Key="BannerHeight">64</x:Double>
+    <Style ApplyToDerivedTypes="True" TargetType="{x:Type ContentPage}">
+        <Setter Property="BackgroundColor" Value="{x:StaticResource AppBackgroundColor}" />
+        <Setter Property="Visual" Value="Default" />
+    </Style>
+    <Style x:Key="RegularTextStyle" TargetType="Label">
+        <Setter Property="Visual" Value="Default" />
+        <Setter Property="TextColor" Value="{x:StaticResource BodyTextColor}" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="Margin" Value="12" />
+    </Style>
+    <Style BasedOn="{x:StaticResource BaseStyle}" TargetType="TabBar" />
+    <Style BasedOn="{x:StaticResource BaseStyle}" TargetType="FlyoutItem" />
+    <Style
+        x:Key="VisualButton"
+        BasedOn="{x:StaticResource BaseStyle}"
+        TargetType="Button">
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="BackgroundColor" Value="#1a5470" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontFamily" Value="RNSSAnz" />
+    </Style>
+    <Style BasedOn="{x:StaticResource BaseStyle}" TargetType="Button">
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="BackgroundColor" Value="{x:StaticResource SelectedButtonBackgroundColor}" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontFamily" Value="Arial" />
+        <Setter Property="Visual" Value="Default" />
+        <Setter Property="FontAttributes" Value="Bold" />
+    </Style>
+    <Style x:Key="ButtonNormalStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{x:StaticResource HyperlinkColor}" />
+        <Setter Property="TextTransform" Value="Uppercase" />
+        <Setter Property="HeightRequest" Value="44" />
+    </Style>
+    <Style x:Key="CustomEntryStyle" TargetType="Entry">
+        <Setter Property="FontFamily" Value="RNSSanz" />
+        <Setter Property="FontSize" Value="Body" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="PlaceholderColor" Value="{x:StaticResource PlaceHolderTextColor}" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="Visual" Value="Default" />
+        <Setter Property="IsCurvedCornersEnabled" Value="False" />
+        <Setter Property="BorderColor" Value="LightGray" />
+    </Style>
+    <Style TargetType="{x:Type NavigationPage}">
+        <Setter Property="BarBackgroundColor"
+                Value="{x:StaticResource HeaderColor}" />
+        <Setter Property="BarTextColor"
+                Value="White" />
+        <Setter Property="BackgroundColor"
+                Value="{x:StaticResource HeaderColor}" />
+        <Setter Property="Visual" Value="Default" />
+    </Style>
+    <Style x:Key="LinkButtonStyle" TargetType="Button">
+        <Setter Property="FontFamily" Value="RNSSanz" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="BorderColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{x:StaticResource HyperlinkColor}" />
+        <Setter Property="FontSize" Value="Default" />
+        <Setter Property="Visual" Value="Default" />
+    </Style>
+    <Style x:Key="LinkLabelStyle" TargetType="Label">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{x:StaticResource HyperlinkColor}" />
+        <Setter Property="FontSize" Value="Default" />
+        <Setter Property="Visual" Value="Default" />
+        <Setter Property="TextTransform" Value="Default" />
+    </Style>
+    <Style x:Key="DarkBannerStyle" TargetType="StackLayout">
+        <Setter Property="BackgroundColor" Value="{x:StaticResource BannerColorDark}" />
+        <Setter Property="Visual" Value="Default" />
+        <Setter Property="HeightRequest" Value="{x:StaticResource BannerHeight}" />
+    </Style>
+    <Style x:Key="LightBannerStyle" TargetType="StackLayout">
+        <Setter Property="BackgroundColor" Value="{x:StaticResource BannerColorLight}" />
+        <Setter Property="Visual" Value="Default" />
+        <Setter Property="HeightRequest" Value="{x:StaticResource BannerHeight}" />
+    </Style>
+    <Style x:Key="WarningTextStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{x:StaticResource RedTextColor}" />
+        <Setter Property="FontSize" Value="Micro" />
+        <Setter Property="Margin" Value="8,8,8,0" />
+    </Style>
+    <Style x:Key="BoldTextStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{x:StaticResource HyperlinkColor}" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="Margin" Value="12" />
+        <Setter Property="FontAttributes" Value="Bold" />
+    </Style>
+    <Style x:Key="SubTitleFontStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{x:StaticResource SubTitleColor}" />
+        <Setter Property="TextTransform" Value="Default" />
+        <Setter Property="FontSize" Value="Subtitle" />
+        <Setter Property="Margin" Value="20" />
+    </Style>
+    <Style x:Key="BoldTitleStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{x:StaticResource SubTitleColor}" />
+        <Setter Property="TextTransform" Value="Default" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="Margin" Value="20" />
+    </Style>
+    <Style x:Key="FramedEntryStyle" TargetType="Frame">
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HasShadow" Value="False" />
+        <Setter Property="IsClippedToBounds" Value="True" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HeightRequest" Value="56" />
+        <Setter Property="BorderColor" Value="{x:StaticResource BorderColor}" />
+        <Setter Property="CornerRadius" Value="4" />
+    </Style>
+    <Style TargetType="Frame">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="{x:StaticResource ButtonBackGroundColor}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+    <Style TargetType="Label">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{Binding TextColor}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+    <Style TargetType="Grid">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="#F2f2f2" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+    <Style TargetType="Entry">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Focused" />
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{x:DynamicResource PrimaryTextColor}" />
+                            <Setter Property="BackgroundColor" Value="Transparent" />
+
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+    <DataTemplate x:Key="TextTemplate" x:Name="textTemplate">
+        <Frame CornerRadius="5" HasShadow="False"
+               >
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ItemSelectedCommand}" CommandParameter="{Binding}" />
+            </Frame.GestureRecognizers>
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label Text="{Binding Title}" Grid.Row="0" LineBreakMode="WordWrap" FontSize="Small"
+                       HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                             Orientation="Horizontal" Grid.Row="1">
+                    <Label Text="{Binding Value,Mode=TwoWay,StringFormat='{0:C}'}" FontSize="Small"
+                           HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Image HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"
+                           Source="disclosure_indicator" />
+                </StackLayout>
+                <BoxView HeightRequest="1" Grid.Row="2" BackgroundColor="{x:StaticResource SeparatorColor}"
+                         HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+            </Grid>
+        </Frame>
+    </DataTemplate>
+    <DataTemplate x:Key="EditableTextTemplate" x:Name="editTextTemplate">
+        <Frame CornerRadius="5"
+               
+               HasShadow="False" BorderColor="{x:StaticResource SeparatorColor}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ItemSelectedCommand}"
+                                      CommandParameter="{x:Reference customAmount}" />
+            </Frame.GestureRecognizers>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="8*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Image Grid.Column="0" HeightRequest="20" Aspect="AspectFit" HorizontalOptions="Start"
+                       VerticalOptions="CenterAndExpand" x:Name="radioButton"
+                       Source="{Binding ButtonImageSource}" />
+                <StackLayout Grid.Column="1" Orientation="Vertical">
+                    <Label Text="{Binding Text}" LineBreakMode="WordWrap" FontSize="Small"
+                           HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"
+                           TextColor="{Binding TextColor}" />
+                </StackLayout>
+                <Label Grid.Column="2" FontFamily="{x:StaticResource FontAwesomeRegular}"
+                       BackgroundColor="Transparent"
+                       HorizontalOptions="Start" VerticalOptions="CenterAndExpand" x:Name="infoButton"
+                       Text="{Binding InfoIcon}"
+                       >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding InfoAction}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+        </Frame>
+    </DataTemplate>
+    <DataTemplate x:Key="RadioButtonTemplate">
+        <Frame CornerRadius="5" HasShadow="False"
+               BorderColor="{StaticResource SeparatorColor}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ItemSelectedCommand}" CommandParameter="{Binding}" />
+            </Frame.GestureRecognizers>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="8*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Image Grid.Column="0" HeightRequest="20" Aspect="AspectFit" HorizontalOptions="Start"
+                       VerticalOptions="CenterAndExpand" x:Name="radioButton"
+                       Source="{Binding ButtonImageSource}" />
+                <StackLayout Grid.Column="1">
+                    <Label Text="{Binding Text}" LineBreakMode="WordWrap" FontSize="Small"
+                           HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"
+                           x:Name="textLabel" TextColor="{Binding TextColor}" HorizontalTextAlignment="Start" />
+                    <Label Text="{Binding SubText}" LineBreakMode="WordWrap" FontSize="Micro" IsVisible="False"
+                           HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand"
+                           x:Name="subtextLabel" TextColor="{Binding TextColor}" FontAttributes="Italic"
+                           HorizontalTextAlignment="Start" />
+                </StackLayout>
+
+                <Label Grid.Column="2" FontFamily="{x:StaticResource FontAwesomeRegular}"
+                       BackgroundColor="Transparent" TextColor="Black"
+                       HorizontalOptions="Start" VerticalOptions="CenterAndExpand" x:Name="infoButton"
+                       FontSize="Large"
+                       Text="{Binding InfoIcon}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding InfoAction}" CommandParameter="{Binding .}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+        </Frame>
+    </DataTemplate>
+    <DataTemplate x:Key="PlusButtonTemplate">
+        <Frame CornerRadius="5" HasShadow="False"
+               BorderColor="{StaticResource SeparatorColor}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ItemSelectedCommand}" CommandParameter="{Binding}" />
+            </Frame.GestureRecognizers>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="8*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Image Grid.Column="0" HeightRequest="20" Aspect="AspectFit" HorizontalOptions="Start"
+                       VerticalOptions="CenterAndExpand" x:Name="radioButton" Source="sharp_add_black" />
+                <Label Grid.Column="1" Text="{Binding Text}" LineBreakMode="WordWrap" FontSize="Small"
+                       HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" x:Name="textLabel"
+                       TextColor="{Binding TextColor}" HorizontalTextAlignment="Start" />
+                <Label Grid.Column="2" FontFamily="{x:StaticResource FontAwesomeRegular}"
+                       BackgroundColor="Transparent"
+                       HorizontalOptions="Start" VerticalOptions="CenterAndExpand" x:Name="infoButton"
+                       Text="{Binding InfoIcon}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding InfoAction}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+        </Frame>
+    </DataTemplate>
+</ResourceDictionary>

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    >
+    <Color x:Key="PrimaryColor">#323438</Color>
+    <Color x:Key="AccentColor">#d9d9d9</Color>
+    <Color x:Key="SecondaryColor">White</Color>
+    <Color x:Key="BorderColor">#597C27</Color>
+    <Color x:Key="PageBackgroundColor">White</Color>
+    <Color x:Key="NavigationBarColor">#323438</Color>
+    <Color x:Key="TintColor">#323232</Color>
+    <Color x:Key="SeparatorColor">#323438</Color>
+    <Color x:Key="SelectedButtonBackgroundColor">#221f1f</Color>
+    <Color x:Key="HeaderColor">#323438</Color>    
+    <Color x:Key="PrimaryTextColor">White</Color>
+    <Color x:Key="PrimaryBodyTextColor">#323438</Color>
+    <Color x:Key="TertiaryTextColor">#7d7d7d</Color>
+    <Color x:Key="SecondaryBorderColor">#597C27</Color>
+    <Color x:Key="BodyTextColor">#323232</Color>
+    <Color x:Key="SecondaryTextColor">#575757</Color>
+    <Color x:Key="BoxedBackgroundColor">#FFF200</Color>    
+    <Color x:Key="LogoBackgroundColor">#323438</Color>
+    <Color x:Key="NavigationBarTextColor">White</Color>        
+    <Color x:Key="NavigationBarTintColor">White</Color>
+    <Color x:Key="NavigationLogoTintColor">#FAFAFA</Color>
+    <Color x:Key="NavigationBarBackgroundColor">#323438</Color>
+    <Color x:Key="TextBackGroundColor">#FAFAFA</Color>
+    <Color x:Key="BoxedTextColor">#323232</Color>
+    <Color x:Key="BottomNavBarColor">#F6F6F6</Color>
+    
+    <Style x:Key="CapsStyle" TargetType="Label">
+        <Setter Property="Visual" Value="Default"/>
+        <Setter Property="TextTransform" Value="Uppercase"/>
+    </Style>
+
+    <Style x:Key="BaseStyle" TargetType="Shell">
+        <Setter Property="Shell.Visual" Value="Default"  />
+        <Setter Property="Shell.BackgroundColor" Value="{StaticResource HeaderColor}" />
+        <Setter Property="Shell.ForegroundColor" Value="White" />
+        <Setter Property="Shell.TitleColor" Value="White" />
+        <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+        <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+        <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource  HeaderColor}" />
+        <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource  HeaderColor}" />
+        <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF" />
+        <Setter Property="Shell.TabBarTitleColor" Value="White" />
+        <Setter Property="Shell.Opacity" Value="1" />
+    </Style>
+
+
+    <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Opacity" Value="1"/>
+        <Setter Property="BackgroundColor" Value="{x:StaticResource PrimaryColor}"/>
+        <Setter Property="TextColor" Value="{x:StaticResource PrimaryTextColor}"/>
+        <Setter Property="Visual" Value="Default"/>
+        <Setter Property="HeightRequest" Value="48"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+    </Style>
+    
+    <Style x:Key="SecondaryButtonStyle" TargetType="Button">
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="BorderWidth" Value="2"/>
+        <Setter Property="HeightRequest" Value="44"/>
+        <Setter Property="BorderColor" Value="{StaticResource BorderColor}"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}"/>
+        <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}"/>
+        <Setter Property="Visual" Value="Default"/>
+    </Style>
+    <Style x:Key="ButtonSelectedStyle" TargetType="Button">
+        <Setter Property="Visual" Value="Default"  />
+        <Setter Property="BackgroundColor" Value="{StaticResource SelectedButtonBackgroundColor}" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="TextTransform" Value="Uppercase"/>
+        <Setter Property="FontSize" Value="Small"/>
+        <Setter Property="HeightRequest" Value="44"/>
+    </Style>
+
+    <Style x:Key="CustomEntryStyle" TargetType="Entry">
+        <Setter Property="FontFamily" Value="RNSSanz"/>
+        <Setter Property="Margin" Value="40,0,40,0"/>
+        <Setter Property="FontSize" Value="Body"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="BackgroundColor" Value="Transparent"/>
+        <Setter Property="TextColor" Value="{x:StaticResource BodyTextColor}"/>
+        <Setter Property="PlaceholderColor" Value="{x:StaticResource PlaceHolderTextColor}"/>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+        <Setter Property="Visual" Value="Default"/>
+        <Setter Property="FontSize" Value="Small"/>
+        <Setter Property="IsCurvedCornersEnabled" Value="False"/>
+        <Setter Property="BorderColor" Value="LightGray"/>
+    </Style>
+    <Style x:Key="RegularTextStyle" TargetType="Label">
+        <Setter Property="Visual" Value="Default"/>
+        <Setter Property="TextColor" Value="{x:StaticResource BodyTextColor}"/>
+        <Setter Property="FontSize" Value="Small"/>
+        <Setter Property="Margin" Value="12"/>
+    </Style>
+
+    <Style x:Key="SmallTextStyle" TargetType="Label">
+        <Setter Property="Visual" Value="Default"/>
+        <Setter Property="TextColor" Value="{x:StaticResource BodyTextColor}"/>
+        <Setter Property="FontSize" Value="Micro"/>
+        <Setter Property="Margin" Value="12"/>
+    </Style>
+    <Style x:Key="ButtonNormalStyle" TargetType="Button">
+        <Setter Property="Visual" Value="Default"  />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{x:StaticResource BodyTextColor}" />
+        <Setter Property="TextTransform" Value="Uppercase"/>
+        <Setter Property="FontSize" Value="Small"/>
+        <Setter Property="HeightRequest" Value="44"/>
+    </Style>
+</ResourceDictionary>
